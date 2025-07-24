@@ -13,7 +13,7 @@ function Beranda() {
   const alThiwal = ['Al-Baqarah', 'Ali Imran', 'An-Nisa', "Al-A'raf", 'Al-Anam', 'Al-Maidah', 'Yunus'];
 
   useEffect(() => {
-    fetch('http://api.alquran.cloud/v1/surah')
+    fetch('https://api.alquran.cloud/v1/surah')
       .then(res => res.json())
       .then(data => setSurahList(data.data))
       .catch(err => console.error(err));
