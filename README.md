@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Al-Qur'an Digital App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplikasi Al-Qur'an digital modern berbasis React, yang menyediakan fitur membaca surah, mendengarkan audio murattal, dan kumpulan doa harian dengan tampilan minimalis dan responsive.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Deskripsi Proyek
 
-### `npm start`
+Aplikasi ini memudahkan pengguna untuk:
+- Membaca ayat Al-Qur'an beserta terjemahannya
+- Mendengarkan audio murattal surah pilihan
+- Mengakses kumpulan doa harian
+- Menyimpan audio favorit untuk diputar ulang
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##  API yang Digunakan
 
-### `npm test`
+- **[AlQuran Cloud API](https://alquran.cloud/api)**  
+  Menampilkan daftar surah dan ayat beserta terjemahan dalam berbagai bahasa.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **[Islamic Network Audio API](https://cdn.islamic.network/quran/audio/64/ar.alafasy/)**  
+  Menyediakan audio murattal surah per nomor surah dengan qari Mishary Rashid Alafasy.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Fitur-fitur Utama
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Membaca surah Al-Qur'an per ayat beserta terjemahan  
+- Mendengarkan audio murattal setiap surah  
+- Menyimpan audio favorit  
+- Melihat kumpulan doa harian  
+- Register dan login user untuk personalisasi  
+- Responsive design dan UI premium dengan animasi halus (Framer Motion)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Struktur Halaman & Routing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Route        | Halaman                        |
+|--------------|--------------------------------|
+| `/login`     | Halaman login user            |
+| `/register`  | Halaman registrasi user       |
+| `/beranda`   | Halaman daftar surah (membaca)|
+| `/audio`     | Halaman audio murattal        |
+| `/doa`       | Halaman doa harian            |
+| `/profile`   | Halaman profil user           |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Cara Menjalankan Secara Lokal
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone repository:
+    ```bash
+    git clone https://github.com/username/project-quran.git
+    cd project-quran
+    ```
 
-## Learn More
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Jalankan aplikasi:
+    ```bash
+    npm start
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Buka di browser:
+    ```
+    http://localhost:3000
+    ```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Link Live Demo
 
-### Analyzing the Bundle Size
+> **[Demo Aplikasi](https://alquran.vercel.app)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Lisensi
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+MIT License © 2025
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> Dibuat dengan ❤️ untuk latihan dan ibadah bersama oleh [Firmas Habibi].

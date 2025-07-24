@@ -1,0 +1,63 @@
+.detail-container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.back-button {
+  background-color: #d20000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.back-button:hover {
+  background-color: #a00000;
+}
+
+.detail-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #d20000 ;
+}
+
+.filter-container {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.filter-container select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: white;
+}
+
+.ayat-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ayat-list li {
+  background-color: #d20000;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.arab-text {
+  font-size: 1.5rem;
+  text-align: right;
+  direction: rtl;
+}
+
+.translation-text {
+  font-style: italic;
+  color: #ddd;
+}

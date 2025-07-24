@@ -1,0 +1,84 @@
+.audio-container {
+  padding: 2rem 1rem;
+  max-width: 95%;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 10px;
+  color: white;
+}
+
+.audio-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #d20000;
+}
+
+.audio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.audio-card {
+  background-color: #d20000; 
+  border: 1px solid #d20000; 
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: white;
+  box-shadow: none;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.audio-card:hover {
+  transform: translateY(-2px);
+  background-color: #a80000;
+  border-color: #444;
+}
+
+.audio-card p {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+  text-align: center;
+  color: white;
+}
+
+.audio-card audio {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.audio-card button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: white; 
+  border: none;
+  color: #d20000;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.audio-card button:hover {
+  background-color: #444; 
+  color: #a80000; 
+}
+
+.audio-card button.favorite {
+  background-color: #d20000;
+  color: white;
+}
+
+.search {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 15px;
+  border: 1px solid #444;
+  background-color: #1e1e1e;
+  margin-bottom: 1rem;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

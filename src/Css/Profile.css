@@ -1,0 +1,103 @@
+.profile-container {
+  max-width: 95%;
+  margin: 40px auto; 
+  padding: 1rem;
+  background-color: #b70606;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: calc(100vh - 120px) !important;
+  margin-bottom: 4rem !important;
+}
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-container p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.biodata-form {
+  margin-top: 2rem;
+}
+
+.biodata-form label {
+  display: block;
+  margin-bottom: 1rem;
+
+}
+
+.biodata-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ec5e5e;
+  border-radius: 5px;
+}
+
+.biodata-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.biodata-form button:hover {
+  background-color: #0056b3;
+}
+
+.edit {
+  color: white; 
+  background-color: #333; 
+  border: 2px solid white; 
+  border-radius: 20px; 
+  padding: 0.5rem 1rem; 
+  cursor: pointer; 
+  transition: all 0.3s ease; 
+}
+
+.edit:hover {
+  background-color: white; 
+  color: #333;
+  border: 2px solid #333;
+}
+
+.profile-item {
+  margin-bottom: 1rem;
+}
+
+.profile-item strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.profile-box {
+  background-color: white;
+  color: #333;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+
+@media (max-width: 600px) {
+  .profile-container {
+    margin: 100px 1rem 0 1rem;
+    padding: 1rem;
+  }
+
+  .biodata-form input {
+    padding: 0.5rem;
+  }
+
+  .biodata-form button {
+    padding: 0.75rem;
+  }
+}
