@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import '../Css/Login.css'
+import '../Css/Login.css';
 
 function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -29,7 +30,7 @@ function Login() {
       localStorage.setItem("user_login", JSON.stringify(user));
       alert("Login berhasil!");
       navigate("/beranda");
-      window.location.reload(); 
+      window.location.reload();
     } else {
       alert("Email atau password salah!");
     }
@@ -40,10 +41,31 @@ function Login() {
       <div className="auth-container">
         <h2>Login</h2>
         <form onSubmit={handleLogin}>
-          <input type="email" placeholder="Email" value={email}
-            onChange={(e) => setEmail(e.target.value)} required />
-          <input type="password" placeholder="Password" value={password}
-            onChange={(e) => setPassword(e.target.value)} required />
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+
+          <div className="password-input-container">
+            <input
+              type={showPassword ? "text" : "password"}
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <button
+              type="button"
+              className="show-hide-button"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? "Hide" : "Show"}
+            </button>
+          </div>
+
           <button type="submit">Login</button>
         </form>
 
@@ -56,3 +78,4 @@ function Login() {
 }
 
 export default Login;
+

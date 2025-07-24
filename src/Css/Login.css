@@ -90,6 +90,28 @@ html, body {
   color:#ccc;
 }
 
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-container input {
+  flex: 1;
+  padding-right: 60px;
+}
+
+.show-hide-button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #d20000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
 @media (max-width: 500px) {
   .auth-container {
     margin: 2rem;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import '../Css/Register.css'
+import '../Css/Register.css';
 
 function Register() {
   const navigate = useNavigate();
@@ -8,6 +8,8 @@ function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -54,10 +56,41 @@ function Register() {
             onChange={(e) => setUsername(e.target.value)} required />
           <input type="email" placeholder="Email" value={email}
             onChange={(e) => setEmail(e.target.value)} required />
-          <input type="password" placeholder="Password" value={password}
-            onChange={(e) => setPassword(e.target.value)} required />
-          <input type="password" placeholder="Confirm Password" value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)} required />
+
+          <div className="password-input-container">
+            <input
+              type={showPassword ? "text" : "password"}
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <button
+              type="button"
+              className="show-hide-button"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? "Hide" : "Show"}
+            </button>
+          </div>
+
+          <div className="password-input-container">
+            <input
+              type={showConfirmPassword ? "text" : "password"}
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+            <button
+              type="button"
+              className="show-hide-button"
+              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+            >
+              {showConfirmPassword ? "Hide" : "Show"}
+            </button>
+          </div>
+
           <button type="submit">Register</button>
         </form>
 
@@ -70,3 +103,4 @@ function Register() {
 }
 
 export default Register;
+

@@ -73,6 +73,27 @@
   text-decoration: none;
 }
 
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-container input {
+  flex: 1;
+  padding-right: 60px; 
+}
+
+.show-hide-button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #d20000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 .register-login-text a:hover {
   text-decoration: underline;
   color: #ccc;
