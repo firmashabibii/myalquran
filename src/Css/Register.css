@@ -1,9 +1,16 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .register-page {
-  min-height: 70vh;
+  min-height: 72vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #121212;
+  overflow-x: hidden;
 }
 
 .auth-container {
@@ -15,11 +22,13 @@
   background-color: #1e1e1e;
   box-shadow: 0 4px 6px rgba(0,0,0,0.3);
   text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .auth-container h2 {
   margin-bottom: 1.5rem;
-  color: #d20000; 
+  color: #d20000;
 }
 
 .auth-container form {
@@ -38,6 +47,7 @@
   font-size: 1rem;
   background-color: #2c2c2c;
   color: white;
+  box-sizing: border-box;
 }
 
 .auth-container input:focus {
@@ -57,6 +67,7 @@
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .auth-container button:hover {
@@ -73,30 +84,34 @@
   text-decoration: none;
 }
 
-.password-input-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.password-input-container input {
-  flex: 1;
-  padding-right: 60px; 
-}
-
-.show-hide-button {
-  position: absolute;
-  right: 10px;
-  background: none;
-  border: none;
-  color: #d20000;
-  cursor: pointer;
-  font-weight: bold;
-}
-
 .register-login-text a:hover {
   text-decoration: underline;
   color: #ccc;
+}
+
+.password-field {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.password-field span {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #d20000;
+}
+
+.password-field span:hover {
+  color: #a80000;
 }
 
 @media (max-width: 500px) {

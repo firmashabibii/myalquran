@@ -1,6 +1,6 @@
 html, body {
-  height: 100%; 
-  margin: 0; 
+  height: 100%;
+  margin: 0;
   padding: 0;
 }
 
@@ -23,13 +23,12 @@ html, body {
   box-shadow: 0 4px 6px rgba(0,0,0,0.3);
   text-align: center;
   box-sizing: border-box;
-  will-change: transform, opacity;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .auth-container h2 {
   margin-bottom: 1.5rem;
-  color: #d20000; 
+  color: #d20000;
 }
 
 .auth-container form {
@@ -48,7 +47,7 @@ html, body {
   font-size: 1rem;
   background-color: #2c2c2c;
   color: white;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .auth-container input:focus {
@@ -87,30 +86,33 @@ html, body {
 
 .login-register-text a:hover {
   text-decoration: underline;
-  color:#ccc;
+  color: #ccc;
 }
 
-.password-input-container {
+.password-field {
   position: relative;
-  display: flex;
-  align-items: center;
+  width: 100%;
+  max-width: 350px;
 }
 
-.password-input-container input {
-  flex: 1;
-  padding-right: 60px;
+.password-field input {
+  width: 100%;
+  padding-right: 40px;
 }
 
-.show-hide-button {
+.password-field span {
   position: absolute;
   right: 10px;
-  background: none;
-  border: none;
-  color: #d20000;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
-  font-weight: bold;
+  font-size: 18px;
+  color: #d20000;
 }
 
+.password-field span:hover {
+  color: #a80000;
+}
 
 @media (max-width: 500px) {
   .auth-container {

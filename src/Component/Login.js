@@ -41,15 +41,10 @@ function Login() {
       <div className="auth-container">
         <h2>Login</h2>
         <form onSubmit={handleLogin}>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+          <input type="email" placeholder="Email" value={email}
+            onChange={(e) => setEmail(e.target.value)} required />
 
-          <div className="password-input-container">
+          <div className="password-field">
             <input
               type={showPassword ? "text" : "password"}
               placeholder="Password"
@@ -57,13 +52,9 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <button
-              type="button"
-              className="show-hide-button"
-              onClick={() => setShowPassword(!showPassword)}
-            >
-              {showPassword ? "Hide" : "Show"}
-            </button>
+            <span onClick={() => setShowPassword(!showPassword)}>
+              {showPassword ? "👁️" : "👁️‍🗨️"}
+            </span>
           </div>
 
           <button type="submit">Login</button>
@@ -78,4 +69,3 @@ function Login() {
 }
 
 export default Login;
-

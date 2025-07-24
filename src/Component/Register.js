@@ -8,6 +8,7 @@ function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -54,10 +55,11 @@ function Register() {
         <form onSubmit={handleRegister}>
           <input type="text" placeholder="Username" value={username}
             onChange={(e) => setUsername(e.target.value)} required />
+
           <input type="email" placeholder="Email" value={email}
             onChange={(e) => setEmail(e.target.value)} required />
 
-          <div className="password-input-container">
+          <div className="password-field">
             <input
               type={showPassword ? "text" : "password"}
               placeholder="Password"
@@ -65,16 +67,12 @@ function Register() {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <button
-              type="button"
-              className="show-hide-button"
-              onClick={() => setShowPassword(!showPassword)}
-            >
-              {showPassword ? "Hide" : "Show"}
-            </button>
+            <span onClick={() => setShowPassword(!showPassword)}>
+              {showPassword ? "👁️" : "👁️‍🗨️"}
+            </span>
           </div>
 
-          <div className="password-input-container">
+          <div className="password-field">
             <input
               type={showConfirmPassword ? "text" : "password"}
               placeholder="Confirm Password"
@@ -82,13 +80,9 @@ function Register() {
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
             />
-            <button
-              type="button"
-              className="show-hide-button"
-              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-            >
-              {showConfirmPassword ? "Hide" : "Show"}
-            </button>
+            <span onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
+              {showConfirmPassword ? "👁️" : "👁️‍🗨️"}
+            </span>
           </div>
 
           <button type="submit">Register</button>
@@ -103,4 +97,3 @@ function Register() {
 }
 
 export default Register;
-
